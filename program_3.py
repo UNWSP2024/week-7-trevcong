@@ -7,8 +7,18 @@ def main():
     # [[2010, "Maine", 1987435], [2010,"Minnesota",6873202], [2011, "Iowa", 3421988]]
     all_entered_values = []
 
-    # Now have the user enter a year. 
-    
+    while(True):
+        try:
+            gg = []
+            exitProgram = input("Do you want to add another year? YES or NO")
+            if exitProgram.lower() == "yes":
+                break
+            try:
+                userInputYear = int(input("Enter the year"))
+            
+            
+        except:
+            print(ValueError, "Please enter in the correct format")
     # The program will add the populations from all states in the list of list for that year only.
     # Pass the list and year to the sum_population_for_year
 
