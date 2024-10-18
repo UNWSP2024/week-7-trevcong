@@ -28,7 +28,11 @@ def main():
 # a list, and a number. The function displays all of the numbers
 # in the list that are greater than the number.
 def display_larger_than_n_list(n, n_list):
-    # Write your code to display all of the numbers in the list that are greater than then number n. below
+    largerThanNList = []
+    for i in range(len(n_list)):
+        if n_list[i] > n:
+            print(n_list[i])
+
     print('In display_larger_than_n_list')
         
 # Call the main function.
