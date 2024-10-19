@@ -1,8 +1,10 @@
-# Program #1: Rainfall
-# Design a program that lets the user enter the total rainfall for each of 12 months into a list.
-# The program should calculate and display the total rainfall for the year, 
-# the average monthly rainfall, # and the months with the highest and lowest amounts.
+#AUTHOR: Trevor Conger
+#DATE: 10/18/24
+#TITLE: Rainfall
 
+
+#Function to gather rainfall for the 12 months in the year
+#RETURN: rainfall array, months array 
 def gatherInputOnRainfall():
     rainfall = []
     months = ["January", "February", "March", "April", "May", "June", 
@@ -21,6 +23,9 @@ def gatherInputOnRainfall():
                 print(ValueError, "Please enter a number.")
     return rainfall, months
 
+#FUNCTION to calculate the rainfall for the months
+#RETURN totalrainfall sum, average rainfall, maxrainfall, month with max rainfall, 
+# min rainfall month, month with min rainfall
 def calculateRainfall(rainfall, months):
     totalRainfall = sum(rainfall)
     averageRainfall = totalRainfall / len(rainfall)
@@ -32,6 +37,13 @@ def calculateRainfall(rainfall, months):
     
     return totalRainfall, averageRainfall, maxRainfall, maxMonth, minRainfall, minMonth
 
+#MAIN
+#call gatherInputOnRainfall
+#call calculateRainfall
+#print totalrainfall
+#print average monthly rainfall
+#print month with highest rainfall
+#print month with the lowest rainfall
 def main():
     rainfall, months = gatherInputOnRainfall()
     total, average, maxRain, maxMonth, minRain, minMonth = calculateRainfall(rainfall, months)

@@ -1,4 +1,7 @@
-# Program #3: US_Population
+#AUTHOR: Trevor Conger
+#DATE: 10/18/24
+#TITLE: States population
+
 def main():
     states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado",
               "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho",
@@ -61,15 +64,16 @@ def main():
             print(e)    
 
     print(all_entered_values)
-
+#FUNCTION sum population for the year
+#param all_entered_values : array with population for year and state
+#param year_to_sum : sum population for that year
+#print population for the year selected 
 def sum_population_for_year(all_entered_values, year_to_sum):
     sum = 0
-    for i in range(len(all_entered_values)):
-        if all_entered_values[0][i] == year_to_sum:
-            sum += all_entered_values[i][2]
-    print("The population for the year ", year_to_sum, " is ", sum)
-
+    for entry in all_entered_values:
+        if entry[0] == year_to_sum:
+            sum += entry[2]
+    print(f"The population for the year {year_to_sum} is {sum}")
     
-# Call the main function.
 if __name__ == '__main__':
     main()
